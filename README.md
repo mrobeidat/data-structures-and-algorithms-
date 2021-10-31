@@ -4,4 +4,4 @@
 
 ## white board image : 
 
-![white Board](whiteboard.jpg)
+![Board](array-reverse.jpg)
