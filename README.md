@@ -4,4 +4,4 @@
 
 ## white board image : 
 
-![](whiteboard.jpg)
+![](https://1drv.ms/u/s!An_0qGlSmmmRiRwc9O1_1ttSZrAf)
