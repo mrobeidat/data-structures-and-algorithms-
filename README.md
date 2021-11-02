@@ -6,6 +6,6 @@
 
 ## white board image : 
 
-![binary](BinarySearch.jpg)
+![binary-search](BinarySearch.jpg)
 
 
