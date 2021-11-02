@@ -1,11 +1,10 @@
-# Reverse an Array
+# data-structures-and-algorithms
 
-## Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the value of the search key, or -1 if the element is not in the array.
+# Table Of Contents
 
-
-
-## white board image : 
-
-![binary-search](BinarySearch.jpg)
-
+| Subject     | links |
+| ----------- | ----------- |
+| array reverse | [python/array-reverse/array-reverse.md](python/array-reverse/array-reverse.md) |
+| array insert-shift | [python/array-insert-shift/array-insert-shift.md](python/array-insert-shift/array-insert-shift.md) |
+| array binary-search | [python/array-binary-search/array-binary-search.md](python/array-binary-search/array-binary-search.md) |
 
