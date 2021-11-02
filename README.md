@@ -5,6 +5,6 @@
 
 ## white board image : 
 
-![Board](array-insert-shift.png)
+![b](Array-shift.jpg)
 
 
