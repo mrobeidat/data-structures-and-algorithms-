@@ -1,33 +1,28 @@
 # Singly Linked List
-Node
-Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
-Linked List
-Create a Linked List class
-Within your Linked List class, include a head property.
-Upon instantiation, an empty Linked List should be created.
-The class should contain the following methods
-insert,includes,to string
-
-
+<!-- Short summary or background information -->
+Implementation:  Extending an Implementation
 ## Challenge
-make the code clear and includes function 
+<!-- Description of the challenge -->
+- [x] Can successfully add a node to the end of the linked list
+
+- [x] Can successfully add multiple nodes to the end of a linked list
+
+- [x] Can successfully insert a node before a node located i the middle of a linked list
+
+- [x] Can successfully insert a node before the first node of a linked list
+
+- [x] Can successfully insert after a node in the middle of the linked list
+
+- [x] Can successfully insert a node after the last node of the linked list
+
+
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-If you just want to insert an element right to the beginning of the LinkedList, that can be done in constant time O(1).
-If you want to delete an element at the beginning of a LinkedList, again constant time O(1).
-If you want to append an item at the end of the list, that might require going through the whole LinkedList, until you reach the very last element, and then inserting the element, this would take Linear time O(n).
+time=o(n)
+space=o(1)
 ## API
 <!-- Description of each method publicly available to your Linked List -->
-insert
-Arguments: value
-Returns: nothing
-Adds a new node with that value to the head of the list with an O(1) Time performance.
-includes
-Arguments: value
-Returns: Boolean
-Indicates whether that value exists as a Node’s value somewhere within the list.
-to string
-Arguments: none
-Returns: a string representing all the values in the Linked List, formatted as:
-"{ a } -> { b } -> { c } -> NULL"
++ insert method :Adds a new node with that value to the head of the list with an O(1) Time performance.
++ Includes method:Indicates whether that value exists as a Node’s value somewhere within the list.
++ string : a string representing all the values in the Linked List
