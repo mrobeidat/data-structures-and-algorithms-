@@ -1,12 +1,17 @@
+# Singly Linked List
+<!-- Short summary or background information -->
+Implementation:  Extending an Implementation
+## Challenge
+<!-- Description of the challenge -->
+- [x] Can successfully add a node to the end of the linked list
 
-# data-structures-and-algorithms
+- [x] Can successfully add multiple nodes to the end of a linked list
 
-# Table Of Contents
+- [x] Can successfully insert a node before a node located i the middle of a linked list
 
-| Subject     | links |
-| ----------- | ----------- |
-| array reverse | [python/array-reverse](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/array-reverse/README.md) |
-| array insert-shift | [python/array-insert-shift](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/array-insert-shift/README.md) |
-| array binary-search | [python/array-binary-search](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/array-binary-search/README.md) |
-| linked-list | [python/linked-list](https://github.com/mrobeidat/data-structures-and-algorithms-401/tree/linked-list) |
+- [x] Can successfully insert a node before the first node of a linked list
+
+- [x] Can successfully insert after a node in the middle of the linked list
+
+- [x] Can successfully insert a node after the last node of the linked list
 
