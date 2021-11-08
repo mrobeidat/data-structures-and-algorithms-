@@ -16,7 +16,6 @@ Implementation:  Extending an Implementation
 - [x] Can successfully insert a node after the last node of the linked list
 
 
-
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 time=o(n)
@@ -34,5 +33,4 @@ it works the same as insert before but here we will add after specific node and 
 
 + Kth-method
 Takes the index number as a parameter and its Return node value from the end of the linked_list.
-
 
