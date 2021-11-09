@@ -11,7 +11,7 @@
 
 
 ## Whiteboard Process
-![board](linked-list-zip.jpg)
+![board](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/linked-list-zip/linked-list-zip.jpg?raw=true)
 
 ## Approach & Efficiency
 
