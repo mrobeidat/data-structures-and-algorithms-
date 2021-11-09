@@ -32,4 +32,4 @@
 | Subject     | links |
 | ----------- | ----------- |
 | Linked List zip | [linked_list/linked_list_zip.py](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/main/linked-list-zip/linked-list-zip/linked_list/linked_list.py) |
-| Test Linked List zip | [tests/test_linked_list.py](tests/test_linked_list_zip.py) |
+| Test Linked List zip | [tests/test_linked_list.py](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/main/linked-list-zip/linked-list-zip/tests/test_linked_list.py) |
