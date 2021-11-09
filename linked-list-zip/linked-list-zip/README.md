@@ -11,8 +11,7 @@
 
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
-
+![]()
 ## Approach & Efficiency
 
 * What approach did you take ? 
