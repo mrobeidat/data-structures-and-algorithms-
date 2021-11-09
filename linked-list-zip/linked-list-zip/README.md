@@ -11,7 +11,8 @@
 
 
 ## Whiteboard Process
-![]()
+![](linked-list-zip.jpg)
+
 ## Approach & Efficiency
 
 * What approach did you take ? 
@@ -30,5 +31,5 @@
  
 | Subject     | links |
 | ----------- | ----------- |
-| Linked List zip | [linked_list/linked_list_zip.py](linked_list_zip/linked_list_zip.py) |
-| Test Linked List zip | [tests/test_linked_list.py](tests/test_linked_list_zip.py) |
+| Linked List zip | [linked_list](linked-list-zip/linked-list-zip/linked_list/linked_list.py) |
+| Test Linked List zip | [tests/test_linked_list.py](linked-list-zip/linked-list-zip/tests/test_linked_list.py) |
