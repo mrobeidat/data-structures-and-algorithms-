@@ -24,7 +24,7 @@ class Stack:
     def pop(self):
 
         if self.top == None:
-            raise EmptyStack("This stack is empty")
+          raise EmptyStack("This stack is empty")
         temp =self.top
         self.top=self.top.next
         temp.next=None
