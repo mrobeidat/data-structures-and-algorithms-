@@ -9,9 +9,6 @@ def test_version():
     assert __version__ == '0.1.0'
 
 
-
-
-
 def test_push(stack):
     actual=stack.top.value
     expected="34"
@@ -52,3 +49,14 @@ def test_enqueue():
     actual=queue.rear.value
 
     assert expected == actual
+
+def test_peek(stack):
+    actual=stack.peek()
+    expected='34'
+    assert actual == expected
+
+def test_is_empty_stack():
+    stack=Stack()
+    assert stack.is_empty() == None
+
+

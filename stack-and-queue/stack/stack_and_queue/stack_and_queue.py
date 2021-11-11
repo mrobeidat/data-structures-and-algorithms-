@@ -33,7 +33,12 @@ class Stack:
 
 
     def peek(self):
-        pass
+       if self.is_empty():
+        raise Exception("This stack is empty")
+       return self.top.value
+
+    def is_empty(self):
+        return not self.top
 
     def is_empty(self):
         pass
