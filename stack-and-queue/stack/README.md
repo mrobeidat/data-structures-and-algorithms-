@@ -1,29 +1,40 @@
-# Stack_and_Queue
+# Challenge Summary
 
-Implementation: Stack_and_Queue
-## Challenge
-- [x]    Can successfully push onto a stack
-- [x]   Can successfully push multiple values onto a stack
-- [x]    Can successfully pop off the stack
-- [x]    Can successfully empty a stack after multiple pops
-- [x]    Can successfully peek the next item on the stack
-- [x]    Can successfully instantiate an empty stack
-- [x]    Calling pop or peek on empty stack raises exception
-- [x]    Can successfully enqueue into a queue
-- [x]    Can successfully enqueue multiple values into a queue
-- [x]    Can successfully dequeue out of a queue the expected value
-- [x]    Can successfully peek into a queue, seeing the expected value
-- [x]    Can successfully empty a queue after multiple dequeues
-- [x]    Can successfully instantiate an empty queue
-- [x]   Calling dequeue or peek on empty queue raises exception
+### Feature Tasks
+
+* Create a new class called pseudo queue.
+1. Do not use an existing Queue.
+2. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+3. Internally, utilize 2 Stack instances to create and manage the queue
+    
+* Methods:
+
+**enqueue**
+            
+1. Arguments: value
+2. Inserts value into the PseudoQueue, using a first-in, first-out approach.
+        
+**dequeue**
+
+1. Arguments: none
+2. Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+
 
 ## Approach & Efficiency
-time=o(n)
-space=o(1)
-## API
-+ push method :adds a new node with that value to the top of the stack with an O(1) Time performance.
-+ pop method:Removes the node from the top of the stack.
-+ peek :Returns Value of the node located at the top of the stack.
-+ is empty:Returns Boolean indicating whether or not the stack is empty.
-+ enqueue:adds a new node with that value to the back of the queue with an O(1) Time performance.
-+ dequeue :Removes the node from the front of the queue. 
+
+> What approach did you take ? 
+* Algorithm 
+
+> Why ?  
+* Because it is stack-queue-pseudo
+
+> What is the Big O space/time for this approach ? 
+**Time : O(1)**
+
+**Space : O(n)**
+
+## Solution
+
+| Subject     | links |
+| ----------- | ----------- |
+| stack-queue-pseudo | [stack-queue-pseudo](stack-queue-pseudo.py) |
