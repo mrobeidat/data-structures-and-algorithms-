@@ -18,7 +18,9 @@
 
 1. Arguments: none
 2. Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+## White-Board process:
 
+![white-board](stack-and-queue/stack/pseudo.jpg)
 
 ## Approach & Efficiency
 
