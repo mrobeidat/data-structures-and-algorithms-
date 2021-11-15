@@ -78,7 +78,7 @@ class Stack:
         return self.top.value
 
 
-    def is_empty(self):
+    def isEmpty(self):
         return not self.top
 
 
