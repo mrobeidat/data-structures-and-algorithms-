@@ -1,37 +1,48 @@
+from stack_and_queue.stack_and_queue import Queue,Stack
 
 
-Cat = []
-Dog = []
 
+# class AnimalShelter(Queue):
+
+
+#     def enqueue(self, value):
+#         if (value == 'cat' or value == 'dog'):
+#           self.enqueue(value)
+
+#         else: return 'please add a dog or a cat'
+
+
+#     def dequeue(self,pref):
+#         if (pref == 'cat' or pref == 'dog'):
+#             return self.dequeue(pref)
+  
+#         elif (pref != 'cat' or pref != 'dog'):
+#          return None
+  
+#         else: 
+#             return 'please select a dog or a cat';
 class AnimalShelter:
     def __init__(self):
+        self.dog = Queue()
+        self.cat = Queue()
+        self.waiting = Stack()
 
-        self.cats = Cat()
-
-        self.dogs = Dog()
-
-    def enqueue(self, animal):
-
-        if animal.name == 'cats':
-
-            self.cats.enqueue(animal)
-
-        elif animal.name == 'dogs':
-
-            self.dogs.enqueue(animal)
+    def enqueue(self,animal):
+        if animal.lower() == "dog":
+            self.dog.enqueue(animal.lower())
+        if animal.lower() == "cat":
+            self.cat.enqueue(animal.lower())
         else:
+            self.waiting.push((animal.lower()))
 
-            return 'NOT Cat, NOT Dog'
+    def dequeue(self, pref='wating'):
+        if pref.lower() == "dog":
+            return self.dog.dequeue()
 
-    def dequeue(self, pref=None):
-        if pref == 'cats':
+        if pref.lower() == "cat":
+            return self.cat.dequeue()
 
-            return self.cats.dequeue().name
-
-        elif pref == 'dogs':
-
-            return self.dogs.dequeue().name
-
+        if pref == 'wating':
+            return self.waiting.pop()
         else:
-
-            return None
+            return 'Null'

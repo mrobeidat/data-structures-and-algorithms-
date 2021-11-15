@@ -144,3 +144,5 @@ class Queue:
 
     def is_empty(self):
         return not self.front
+
+
