@@ -1,26 +1,22 @@
 # Challenge Summary
 
-### Feature Tasks
+1. Create a class called AnimalShelter which holds only dogs and cats.
+2. The shelter operates using a first-in, first-out approach.
+3. Implement the following methods:
 
-* Create a new class called pseudo queue.
-1. Do not use an existing Queue.
-2. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
-3. Internally, utilize 2 Stack instances to create and manage the queue
-    
-* Methods:
+* enqueue
 
-**enqueue**
-            
-1. Arguments: value
-2. Inserts value into the PseudoQueue, using a first-in, first-out approach.
+1. Arguments: animal
+2. animal can be either a dog or a cat object.
         
-**dequeue**
+* dequeue
 
-1. Arguments: none
-2. Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
-## White-Board process:
+1. Arguments: pref
+2. pref can be either "dog" or "cat"
+3. Return: either a dog or a cat, based on preference.
+4. If pref is not "dog" or "cat" then return null.
 
-![white-board](stack-and-queue/stack/pseudo.jpg)
+
 
 ## Approach & Efficiency
 
@@ -28,15 +24,40 @@
 * Algorithm 
 
 > Why ?  
-* Because it is stack-queue-pseudo
+* Because it is stack-and-queue class
 
 > What is the Big O space/time for this approach ? 
 **Time : O(1)**
 
 **Space : O(n)**
 
+
 ## Solution
 
-| Subject     | links |
-| ----------- | ----------- |
-| stack-queue-pseudo | [stack-queue-pseudo](stack-queue-pseudo.py) |
+        Cat = []
+        Dog = []
+
+        class AnimalShelter:
+        def __init__(self):
+            self.cats = Cat()
+            self.dogs = Dog()
+
+        def enqueue(self,animal):
+            if animal.name == 'cats':
+            self.cats.enqueue(animal)
+            elif animal.name == 'dogs':
+            self.dogs.enqueue(animal)
+            else: 
+            return 'NOT Cat, NOT Dog'
+
+        def dequeue(self, pref = None):
+            if pref == 'cats':
+            return self.cats.dequeue().name
+            elif pref == 'dogs':
+            return self.dogs.dequeue().name
+            else: 
+            return None 
+
+        if __name__ == '__main__':
+        pass
+
