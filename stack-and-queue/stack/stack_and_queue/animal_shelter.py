@@ -1,5 +1,4 @@
-from stack_and_queue.stack_and_queue import Queue,Stack
-
+from stack_and_queue.stack_and_queue import Queue, Stack
 
 
 # class AnimalShelter(Queue):
@@ -15,11 +14,11 @@ from stack_and_queue.stack_and_queue import Queue,Stack
 #     def dequeue(self,pref):
 #         if (pref == 'cat' or pref == 'dog'):
 #             return self.dequeue(pref)
-  
+
 #         elif (pref != 'cat' or pref != 'dog'):
 #          return None
-  
-#         else: 
+
+#         else:
 #             return 'please select a dog or a cat';
 class AnimalShelter:
     def __init__(self):
@@ -27,7 +26,7 @@ class AnimalShelter:
         self.cat = Queue()
         self.waiting = Stack()
 
-    def enqueue(self,animal):
+    def enqueue(self, animal):
         if animal.lower() == "dog":
             self.dog.enqueue(animal.lower())
         if animal.lower() == "cat":

@@ -17,6 +17,10 @@
 4. If pref is not "dog" or "cat" then return null.
 
 
+## White-Board Process 
+
+![white-board](animal-Shelter.jpg)
+
 
 ## Approach & Efficiency
 
@@ -34,30 +38,36 @@
 
 ## Solution
 
-        Cat = []
-        Dog = []
+  class AnimalShelter:
+    def __init__(self):
+        self.dog = Queue()
+        self.cat = Queue()
+        self.waiting = Stack()
 
-        class AnimalShelter:
-        def __init__(self):
-            self.cats = Cat()
-            self.dogs = Dog()
+    def enqueue(self,animal):
+        if animal.lower() == "dog":
+            self.dog.enqueue(animal.lower())
+        if animal.lower() == "cat":
+            self.cat.enqueue(animal.lower())
+        else:
+            self.waiting.push((animal.lower()))
 
-        def enqueue(self,animal):
-            if animal.name == 'cats':
-            self.cats.enqueue(animal)
-            elif animal.name == 'dogs':
-            self.dogs.enqueue(animal)
-            else: 
-            return 'NOT Cat, NOT Dog'
+    def dequeue(self, pref='wating'):
+        if pref.lower() == "dog":
+            return self.dog.dequeue()
 
-        def dequeue(self, pref = None):
-            if pref == 'cats':
-            return self.cats.dequeue().name
-            elif pref == 'dogs':
-            return self.dogs.dequeue().name
-            else: 
-            return None 
+        if pref.lower() == "cat":
+            return self.cat.dequeue()
 
-        if __name__ == '__main__':
-        pass
+        if pref == 'wating':
+            return self.waiting.pop()
+        else:
+            return 'Null'
 
+
+      
+
+| Subject     | links |
+| ----------- | ----------- |
+| stack-queue-animal-shelter | [stack_queue_animal_shelter](stack_and_queue/animal_shelter.py) |
+| test_stack_queue_animal_shelter | [test_stack_queue_animal_shelter](tests/test_animal_shelter.py) |
