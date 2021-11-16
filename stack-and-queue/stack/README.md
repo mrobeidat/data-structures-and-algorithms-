@@ -37,7 +37,7 @@
 
 
 ## Solution
-
+```
   class AnimalShelter:
     def __init__(self):
         self.dog = Queue()
@@ -63,7 +63,7 @@
             return self.waiting.pop()
         else:
             return 'Null'
-
+```
 
       
 
