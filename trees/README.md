@@ -54,4 +54,4 @@
 | ----------- | ----------- |
 | binary_tree | [binary_tree](trees/trees.py) |
 | test_trees | [test_trees.py](tests/test_trees.py) |
-| tree_max | [test_trees.py](trees/trees.py) |
+| tree_max | [test_trees.py](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees-max/trees/trees/trees.py) |
