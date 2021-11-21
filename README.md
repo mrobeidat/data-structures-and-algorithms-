@@ -1,36 +1,19 @@
-# Singly Linked List
-<!-- Short summary or background information -->
-Implementation:  Extending an Implementation
-## Challenge
-<!-- Description of the challenge -->
-- [x] Can successfully add a node to the end of the linked list
+# data-structures-and-algorithms
 
-- [x] Can successfully add multiple nodes to the end of a linked list
+# Table Of Contents
 
-- [x] Can successfully insert a node before a node located i the middle of a linked list
-
-- [x] Can successfully insert a node before the first node of a linked list
-
-- [x] Can successfully insert after a node in the middle of the linked list
-
-- [x] Can successfully insert a node after the last node of the linked list
-
-
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-time=o(n)
-space=o(1)
-## API
-<!-- Description of each method publicly available to your Linked List -->
-+ insert method :Adds a new node with that value to the head of the list with an O(1) Time performance.
-+ Includes method:Indicates whether that value exists as a Node’s value somewhere within the list.
-+ string : a string representing all the values in the Linked List
-+ insert before
-this method takes two arguments the first one is the node wher i want to add before and the second one the new value that i want to add
-
-+ insert after
-it works the same as insert before but here we will add after specific node and its also contains two arguments the node i want to add after and the new value
-
-+ Kth-method
-Takes the index number as a parameter and its Return node value from the end of the linked_list.
-
+| Subject     | links |
+| ----------- | ----------- |
+| array reverse | [array reverse](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/array-reverse/README.md) |
+| array insert-shift | [array insert-shift](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/array-insert-shift/README.md) |
+| array binary-search | [ array binary-search ](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/array-binary-search/README.md) |
+| linked_list | [linked_list](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/linked-list/README.md) |
+| linked_list_insertions | [linked_list_insertions](https://github.com/mrobeidat/data-structures-and-algorithms-401/tree/linked-list-insertions) |
+| linked_list_kth | [linked_list_kth](https://github.com/mrobeidat/data-structures-and-algorithms-401/tree/linked-list-kth) |
+| linked_list_zip | [linked_list_zip](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/linked-list-zip/README.md) |
+| Stack and Queue | [Stack and Queue](https://github.com/mrobeidat/data-structures-and-algorithms-401/tree/stack-and-queue) |
+| stack-queue-pseudo | [stack-queue-pseudo](https://github.com/mrobeidat/data-structures-and-algorithms-401/tree/stack-queue-pseudo) |
+| stack_queue_brackets | [stack_queue_brackets](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/stack-queue-brackets/stack-and-queue/stack/README.md) |
+| stack-queue-animal-shelter | [stack-queue-animal-shelter](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/stack-queue-animal-shelter/stack-and-queue/stack/README.md) |
+| trees | [trees](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees/stack-and-queue/stack/README.md) |
+| tree-max | [tree-max](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees-max/trees/README.md) |
