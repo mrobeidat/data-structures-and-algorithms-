@@ -65,3 +65,19 @@ def test_in_order():
     actual = tree.in_order()
     assert actual == expected
 
+
+def test_maximum_num_in_tree():
+    expected = 5
+    tree = BinarySearchTree()
+    tree.add(3)
+    tree.add(1)
+    tree.add(5)
+    tree.add(2)
+
+    actual = tree.get_max()
+    assert actual == expected
+
+def test_max_of_empty_tree():
+    with pytest.raises(Exception):
+        tree = BinaryTree()
+        actual = tree.get_max()

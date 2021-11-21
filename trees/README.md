@@ -29,39 +29,9 @@
 * 2- Breadth First :
 
 *Breadth first traversal iterates through the tree by going through each level of the tree node-by-node.*
+## White-Board Process
 
-
-### Features
-
-> Node
-**Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.**
-
-> Binary Tree
-**Create a Binary Tree class**
-    
-*Define a method for each of the depth first traversals:*
-
-1. pre order
-2. in order
-3. post order which returns an array of the values, ordered appropriately.
-    
-* Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
-
-> Binary Search Tree
-**Create a Binary Search Tree class** 
-
-*This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:*
-
-- Add
-            
-1. Arguments: value
-2. Return: nothing
-3. Adds a new node with that value in the correct location in the binary search tree.
-
-- Contains
-
-1. Argument: value
-2. Returns: boolean indicating whether or not the value is in the tree at least once.
+![](max_tree.jpg)
 
 ## Approach & Efficiency
 
@@ -84,3 +54,4 @@
 | ----------- | ----------- |
 | binary_tree | [binary_tree](trees/trees.py) |
 | test_trees | [test_trees.py](tests/test_trees.py) |
+| tree_max | [test_trees.py](trees/trees.py) |

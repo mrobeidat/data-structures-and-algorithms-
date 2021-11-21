@@ -60,6 +60,23 @@ class BinaryTree:
 
         return list_of_items
 
+    def get_max(self):
+
+        self.max = self.root.data
+
+        def max_num(node):
+            if node.data > self.max:
+              self.max = node.data
+            if node.left:
+                max_num(node.left)
+            if node.right:
+                max_num(node.right)
+            return self.max
+            
+        if not self.root:
+            raise Exception("The Tree is empty !!!")
+
+        return max_num(self.root)
 
 class BinarySearchTree(BinaryTree):
    
