@@ -35,10 +35,10 @@ class BinaryTree:
          front = breadth.dequeue()
          list_of_items += [front.data]
 
-         if front.left:
+         if front.left is not None:
             breadth.enqueue(front.left)
 
-         if front.right:
+         if front.right is not None:
             breadth.enqueue(front.right)
 
         return list_of_items
