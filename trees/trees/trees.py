@@ -5,11 +5,43 @@ class Node:
         self.left = None
         self.right = None
 
+class Queue:
+  def __init__(self, collection=[]):
+    self.data = collection
 
+  def peek(self):
+    if len(self.data):
+      return True
+    return False
+
+  def enqueue(self,item):
+    self.data.append(item)
+
+  def dequeue(self):
+    return self.data.pop(0)
+    
 class BinaryTree:
 
     def __init__(self):
         self.root = None
+    def breadth_first(self):
+       
+        breadth = Queue()
+        breadth.enqueue(self.root)
+
+        list_of_items = []
+
+        while breadth.peek():
+         front = breadth.dequeue()
+         list_of_items += [front.data]
+
+         if front.left:
+            breadth.enqueue(front.left)
+
+         if front.right:
+            breadth.enqueue(front.right)
+
+        return list_of_items
 
     def pre_order(self):
       
@@ -78,6 +110,7 @@ class BinaryTree:
 
         return max_num(self.root)
 
+    
 class BinarySearchTree(BinaryTree):
    
 
@@ -122,4 +155,25 @@ class BinarySearchTree(BinaryTree):
                         return False
                     temp = temp.right
 
+def breadth_first(self):
+    """
+    A binary tree method which returns a list of items that it contains
+    input: None
+    output: tree items
+    """
+    breadth = Queue()
+    breadth.enqueue(self.root)
 
+    list_of_items = []
+
+    while breadth.peek():
+      front = breadth.dequeue()
+      list_of_items += [front.data]
+
+      if front.left:
+        breadth.enqueue(front.left)
+
+      if front.right:
+        breadth.enqueue(front.right)
+
+    return list_of_items

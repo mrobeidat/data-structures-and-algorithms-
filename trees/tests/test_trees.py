@@ -81,3 +81,19 @@ def test_max_of_empty_tree():
     with pytest.raises(Exception):
         tree = BinaryTree()
         actual = tree.get_max()
+
+
+def test_breadth_first_2():
+   
+    tree = BinaryTree()
+    a_node = Node('1')
+    b_node = Node('2')
+    c_node = Node('3')
+    d_node = Node('4')
+    a_node.left = b_node
+    a_node.right = c_node
+    b_node.left = d_node
+    tree.root = a_node
+    expected = ["1", "2", "3", "4"]
+    actual = tree.breadth_first()
+    assert actual == expected
