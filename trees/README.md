@@ -25,33 +25,59 @@
 * Post-order: left >> right >> root
 
  
-
 * 2- Breadth First :
 
 *Breadth first traversal iterates through the tree by going through each level of the tree node-by-node.*
-## White-Board Process
 
-![](max_tree.jpg)
+### Feature Tasks
+
+* Write a function called breadth first
+* Arguments: tree
+* Return: list of all values in the tree, in the order they were encountered
+
+
+## Whiteboard Process
+
+![Whiteboard-Process](tree-breadth-first.png)
 
 ## Approach & Efficiency
 
-- What approach did you take ? 
+> What approach did you take ?
 
-**Algorithm**
+**Breadth-first approach**
 
-- Why ?
+> Why ? 
+**Because it is Breadth-first tree**
+ 
+> What is the Big O space/time for this approach ?
+**Time : O(n) Because : n is the number of nodes in the binary tree**
 
-**Because it is Binary and Binary search trees** 
+**Space : O(n) Because : n is the number of nodes in the binary tree**
 
-- What is the Big O space/time for this approach ?
+## Solution
+```
+ def breadth_first(self):
+       
+        breadth = Queue()
+        breadth.enqueue(self.root)
 
-**Space : O(1), Because : not allocating any additional space.** 
+        list_of_items = []
 
-**Time : O(h), Because : have to search all the way down to a leaf**
+        while breadth.peek():
+         front = breadth.dequeue()
+         list_of_items += [front.data]
 
+         if front.left:
+            breadth.enqueue(front.left)
+
+         if front.right:
+            breadth.enqueue(front.right)
+
+        return list_of_items
+
+```
 
 | Subject     | links |
 | ----------- | ----------- |
-| binary_tree | [binary_tree](trees/trees.py) |
-| test_trees | [test_trees.py](tests/test_trees.py) |
-| tree_max | [test_trees.py](trees/trees.py) |
+| tree_breadth_first | [tree_breadth_first](trees/trees.py) |
+| test_tree_breadth_first | [test_tree_breadth_first](tests/test_trees.py) |
