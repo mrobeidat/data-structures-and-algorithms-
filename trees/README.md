@@ -31,53 +31,75 @@
 
 ### Feature Tasks
 
-* Write a function called breadth first
-* Arguments: tree
-* Return: list of all values in the tree, in the order they were encountered
+* Write a function called fizz buzz tree
+* Arguments: k-ary tree
+* Return: new k-ary tree
 
+**Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:**
+
+* If the value is divisible by 3, replace the value with “Fizz”
+* If the value is divisible by 5, replace the value with “Buzz”
+* If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+* If the value is not divisible by 3 or 5, simply turn the number into a String.
 
 ## Whiteboard Process
 
-![Whiteboard-Process](tree-breadth-first.png)
+![](tree-fizz-buzz.jpg)
 
 ## Approach & Efficiency
 
 > What approach did you take ?
-
-**Breadth-first approach**
+**Algorithm**
 
 > Why ? 
-**Because it is Breadth-first tree**
- 
-> What is the Big O space/time for this approach ?
-**Time : O(n) Because : n is the number of nodes in the binary tree**
+**Because it is fizz buzz tree** 
 
-**Space : O(n) Because : n is the number of nodes in the binary tree**
+> What is the Big O space/time for this approach ?
+**Time : O(n) Because : n is the number of nodes in the tree**
+
+**Space : O(n) Because : spaces number unknown**
 
 ## Solution
 ```
- def breadth_first(self):
-       
-        breadth = Queue()
-        breadth.enqueue(self.root)
+class Node_2:
+    def __init__(self,value=''):
+        self.value = value
+        self.child = []
 
-        list_of_items = []
 
-        while breadth.peek():
-         front = breadth.dequeue()
-         list_of_items += [front.data]
+def fizz_buzz_tree(root):
+        if root == None:
+            return root
+        
+        crruent = root
 
-         if front.left:
-            breadth.enqueue(front.left)
+        data = []
 
-         if front.right:
-            breadth.enqueue(front.right)
+        data.append(crruent)
 
-        return list_of_items
+        while len(data) !=0:
+            crruent = data.pop(0)
+
+            if crruent.value % 15==0:
+                crruent.value = 'FizzBuzz'
+
+            elif crruent.value % 5 == 0:
+                crruent.value = 'Buzz'
+
+            elif crruent.value % 3 == 0:
+                crruent.value = 'Fizz'
+            else:
+                crruent.value = str(crruent.value)
+
+            for node in crruent.child:
+                data.append(node)
+
+        return root
 
 ```
 
 | Subject     | links |
 | ----------- | ----------- |
-| tree_breadth_first | [tree_breadth_first](trees/trees.py) |
-| test_tree_breadth_first | [test_tree_breadth_first](tests/test_trees.py) |
+| tree_fizz_buzz | [tree_fizz_buzz](trees/trees.py) |
+| test_tree_fizz_buzz | [test_tree_fizz_buzz](tests/test_trees.py) |
+

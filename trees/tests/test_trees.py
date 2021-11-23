@@ -99,3 +99,37 @@ def test_breadth_first_2():
     assert actual == expected
 
     
+"""*********************Fizz_Buzz_Tree********************"""
+
+def test_If_value_divisible_by_3():
+    tree= KTree()
+    tree.root = Node_2(3)
+    excepted = 'Fizz'
+    actual = fizz_buzz_tree(tree.root).value
+    assert excepted == actual
+
+def test_If_value_divisible_by_5():
+    tree= KTree()
+    tree.root = Node_2(3)
+    tree.root.child.append(Node_2(5))
+    excepted = 'Buzz'
+    actual = fizz_buzz_tree(tree.root).child[0].value
+    assert excepted == actual
+
+def test_If_value_divisible_by_3_and_5_():
+    tree= KTree()
+    tree.root = Node_2(3)
+    tree.root.child.append(Node_2(5))
+    tree.root.child.append(Node_2(15))
+    excepted = 'FizzBuzz'
+    actual = fizz_buzz_tree(tree.root).child[1].value
+    assert excepted == actual
+
+def test_If_value_not_divisible_by_3_or_5():
+    tree= KTree()
+    tree.root = Node_2(3)
+    tree.root.child.append(Node_2(5))
+    tree.root.child.append(Node_2(2))
+    excepted = '2'
+    actual = fizz_buzz_tree(tree.root).child[1].value
+    assert excepted == actual

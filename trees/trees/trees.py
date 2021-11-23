@@ -5,6 +5,7 @@ class Node:
         self.left = None
         self.right = None
 
+
 class Queue:
   def __init__(self, collection=[]):
     self.data = collection
@@ -177,3 +178,43 @@ def breadth_first(self):
         breadth.enqueue(front.right)
 
     return list_of_items
+
+class KTree:
+    def __init__(self):
+        self.root = None
+
+
+class Node_2:
+    def __init__(self,value=''):
+        self.value = value
+        self.child = []
+
+
+def fizz_buzz_tree(root):
+        if root == None:
+            return root
+        
+        crruent = root
+
+        data = []
+
+        data.append(crruent)
+
+        while len(data) !=0:
+            crruent = data.pop(0)
+
+            if crruent.value % 15==0:
+                crruent.value = 'FizzBuzz'
+
+            elif crruent.value % 5 == 0:
+                crruent.value = 'Buzz'
+
+            elif crruent.value % 3 == 0:
+                crruent.value = 'Fizz'
+            else:
+                crruent.value = str(crruent.value)
+
+            for node in crruent.child:
+                data.append(node)
+
+        return root
