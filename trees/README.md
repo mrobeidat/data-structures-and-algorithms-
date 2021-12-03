@@ -25,33 +25,83 @@
 * Post-order: left >> right >> root
 
  
-
 * 2- Breadth First :
 
 *Breadth first traversal iterates through the tree by going through each level of the tree node-by-node.*
-## White-Board Process
 
-![](max_tree.jpg)
+### Feature Tasks
+
+* Write a function called fizz buzz tree
+* Arguments: k-ary tree
+* Return: new k-ary tree
+
+**Determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:**
+
+* If the value is divisible by 3, replace the value with “Fizz”
+* If the value is divisible by 5, replace the value with “Buzz”
+* If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+* If the value is not divisible by 3 or 5, simply turn the number into a String.
+
+## Whiteboard Process
+
+![](tree-fizz-buzz.jpg)
 
 ## Approach & Efficiency
 
-- What approach did you take ? 
-
+> What approach did you take ?
 **Algorithm**
 
-- Why ?
+> Why ? 
+**Because it is fizz buzz tree** 
 
-**Because it is Binary and Binary search trees** 
+> What is the Big O space/time for this approach ?
+**Time : O(n) Because : n is the number of nodes in the tree**
 
-- What is the Big O space/time for this approach ?
+**Space : O(n) Because : spaces number unknown**
 
-**Space : O(1), Because : not allocating any additional space.** 
+## Solution
+```
+class Node_2:
+    def __init__(self,value=''):
+        self.value = value
+        self.child = []
 
-**Time : O(h), Because : have to search all the way down to a leaf**
 
+def fizz_buzz_tree(root):
+        if root == None:
+            return root
+        
+        crruent = root
+
+        data = []
+
+        data.append(crruent)
+
+        while len(data) !=0:
+            crruent = data.pop(0)
+
+            if crruent.value % 15==0:
+                crruent.value = 'FizzBuzz'
+
+            elif crruent.value % 5 == 0:
+                crruent.value = 'Buzz'
+
+            elif crruent.value % 3 == 0:
+                crruent.value = 'Fizz'
+            else:
+                crruent.value = str(crruent.value)
+
+            for node in crruent.child:
+                data.append(node)
+
+        return root
+
+```
 
 | Subject     | links |
 | ----------- | ----------- |
 | binary_tree | [binary_tree](trees/trees.py) |
 | test_trees | [test_trees.py](tests/test_trees.py) |
 | tree_max | [test_trees.py](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees-max/trees/trees/trees.py) |
+| tree_fizz_buzz | [tree_fizz_buzz](trees/trees.py) |
+| test_tree_fizz_buzz | [test_tree_fizz_buzz](tests/test_trees.py) |

@@ -6,10 +6,43 @@ class Node:
         self.right = None
 
 
+class Queue:
+  def __init__(self, collection=[]):
+    self.data = collection
+
+  def peek(self):
+    if len(self.data):
+      return True
+    return False
+
+  def enqueue(self,item):
+    self.data.append(item)
+
+  def dequeue(self):
+    return self.data.pop(0)
+    
 class BinaryTree:
 
     def __init__(self):
         self.root = None
+    def breadth_first(self):
+       
+        breadth = Queue()
+        breadth.enqueue(self.root)
+
+        list_of_items = []
+
+        while breadth.peek():
+         front = breadth.dequeue()
+         list_of_items += [front.data]
+
+         if front.left is not None:
+            breadth.enqueue(front.left)
+
+         if front.right is not None:
+            breadth.enqueue(front.right)
+
+        return list_of_items
 
     def pre_order(self):
       
@@ -78,6 +111,7 @@ class BinaryTree:
 
         return max_num(self.root)
 
+    
 class BinarySearchTree(BinaryTree):
    
 
@@ -122,4 +156,65 @@ class BinarySearchTree(BinaryTree):
                         return False
                     temp = temp.right
 
+def breadth_first(self):
+    """
+    A binary tree method which returns a list of items that it contains
+    input: None
+    output: tree items
+    """
+    breadth = Queue()
+    breadth.enqueue(self.root)
 
+    list_of_items = []
+
+    while breadth.peek():
+      front = breadth.dequeue()
+      list_of_items += [front.data]
+
+      if front.left:
+        breadth.enqueue(front.left)
+
+      if front.right:
+        breadth.enqueue(front.right)
+
+    return list_of_items
+
+class KTree:
+    def __init__(self):
+        self.root = None
+
+
+class Node_2:
+    def __init__(self,value=''):
+        self.value = value
+        self.child = []
+
+
+def fizz_buzz_tree(root):
+        if root == None:
+            return root
+        
+        crruent = root
+
+        data = []
+
+        data.append(crruent)
+
+        while len(data) !=0:
+            crruent = data.pop(0)
+
+            if crruent.value % 15==0:
+                crruent.value = 'FizzBuzz'
+
+            elif crruent.value % 5 == 0:
+                crruent.value = 'Buzz'
+
+            elif crruent.value % 3 == 0:
+                crruent.value = 'Fizz'
+            else:
+                crruent.value = str(crruent.value)
+
+            for node in crruent.child:
+                data.append(node)
+
+        return root
