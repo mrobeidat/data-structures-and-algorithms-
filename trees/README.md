@@ -100,6 +100,8 @@ def fizz_buzz_tree(root):
 
 | Subject     | links |
 | ----------- | ----------- |
+| binary_tree | [binary_tree](trees/trees.py) |
+| test_trees | [test_trees.py](tests/test_trees.py) |
+| tree_max | [test_trees.py](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees-max/trees/trees/trees.py) |
 | tree_fizz_buzz | [tree_fizz_buzz](trees/trees.py) |
 | test_tree_fizz_buzz | [test_tree_fizz_buzz](tests/test_trees.py) |
-
