@@ -1,5 +1,5 @@
 # Pseudocode 
-
+```
     InsertionSort(int[] arr)
 
     FOR i = 1 to arr.length
@@ -12,7 +12,7 @@
         j <-- j - 1
 
     arr[j + 1] <-- temp
-
+```
 # Trace 
 
 ## Given Array: [8,4,23,42,16,15]

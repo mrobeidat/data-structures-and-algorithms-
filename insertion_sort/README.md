@@ -21,7 +21,7 @@
 
 
 ## Solution
-
+```
   def insertionSort(array):
     for i in range(1, len(array)):
         key = array[i]
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     insertionSort(arr)
     print('Sorted Array :')
     print(arr)
-
+```
 | Subject     | links |
 | ----------- | ----------- |
 | insertion_sort | [insertion_sort](insertion_sort/insertion_sort.py) |
