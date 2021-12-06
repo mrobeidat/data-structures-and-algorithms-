@@ -18,5 +18,5 @@
 | trees | [trees](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees/stack-and-queue/stack/README.md) |
 | tree-max | [tree-max](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/trees-max/trees/README.md) |
 | insertion-sort | [insertion-sort](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/insertion_sortt/README.md) |
-| merge-sort | [insertion-sort](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/merge_-sort/merge_sort/README.md) |
+| merge-sort | [merge-sort](https://github.com/mrobeidat/data-structures-and-algorithms-401/blob/merge_-sort/merge_sort/README.md) |
 
