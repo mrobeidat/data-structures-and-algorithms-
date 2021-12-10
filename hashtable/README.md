@@ -1,6 +1,8 @@
 # Hashtables
  is a data structure that implements an associative array abstract data type, a structure that can map keys to values
 
+# Screen shot of tests: 
+![](hashtable.png)
 ## Challenge
 Implement a Hashtable Class with the following methods:
 
@@ -38,3 +40,5 @@ Implement a Hashtable Class with the following methods:
 - hash
     + Arguments: key
     + Returns: Index in the collection for that key
+
+
