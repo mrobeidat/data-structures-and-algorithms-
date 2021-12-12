@@ -66,7 +66,26 @@ class HashTable:
         return sum([ord(char) for char in key]) * 7 % self.__size
 
 
+    def repeated_word(self,str):
+        
+        if str == "":
+         return str
+        arr1 = str.split(',')
+        arr2 = ' '.join(arr1)
+        arr = arr2.split()
+        for value in arr:
+            repeted_word = value.lower()
+            if self.contains(repeted_word):
+                return value
+            else:
+                self.add(repeted_word,value)
+
+
 if __name__ == "__main__":
     table = HashTable()
     table.add('Yousef' , 25)
     print(table.get('Yousef'))
+    hash = HashTable()
+    str="Once upon a time, there was a brave princess who..."
+    actual = hash.repeated_word(str)
+    print(actual)
