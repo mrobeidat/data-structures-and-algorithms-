@@ -7,9 +7,6 @@ def test_version():
     assert __version__ == '0.1.0'
 
 
-
-
-
 @pytest.fixture
 def hashtable():
 	return HashTable()
@@ -45,3 +42,4 @@ def test_value_handle_collision(hashtable):
     expected=True
     actual= hashtable.contains('Yousef')
     assert actual == expected
+ 
