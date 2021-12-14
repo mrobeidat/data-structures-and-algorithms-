@@ -66,6 +66,7 @@ class HashTable:
         return sum([ord(char) for char in key]) * 7 % self.__size
 
 
+    
 if __name__ == "__main__":
     table = HashTable()
     table.add('Yousef' , 25)
