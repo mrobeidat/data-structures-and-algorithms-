@@ -1,52 +1,115 @@
-
 from graph_breadth_first import __version__
-from graph_breadth_first import *
+from graph_breadth_first.graph_breadth_first import *
+
 import pytest
 
-#@pytest
+
 def test_version():
     assert __version__ == '0.1.0'
 
-#@pytest
-def test_add_node(value):
-    node = Vertex(value)
-    actual = value
-    excepted = node
-    assert actual == excepted
+def test_add_node():
+  graph = Graph()
+  expected = "test"
+  actual = graph.add_node('test').value
+  assert actual == expected
 
-#@pytest
-def test_add_edge(vertex1, vertex2, weight=1):
-    edge = Edge(vertex2, weight)
-    actual = weight(vertex1, vertex2)
-    excepted = edge
-    assert actual == excepted
+def test_size_empty():
 
-#@pytest
-def test_get_nodes(self):
-    actual = self.graph.keys()
-    excepted = actual
-    assert actual == excepted
+    graph = Graph()
 
-#@pytest
+    expected = 0
+
+    actual = graph.size()
+
+    assert actual == expected
+
+
+def test_size():
+
+    graph = Graph()
+
+    graph.add_node('spam')
+
+    expected = 1
+
+    actual = graph.size()
+
+    assert actual == expected
+
+
+def test_add_edge_interloper_start():
+
+    graph = Graph()
+
+    start = Vertex('start')
+
+    end = graph.add_node('end')
+
+    with pytest.raises(KeyError):
+        graph.add_edge(start, end)
+
+
+def test_add_edge_interloper_end():
+
+    graph = Graph()
+
+    end = Vertex('end')
+
+    start = graph.add_node('start')
+
+    with pytest.raises(KeyError):
+        graph.add_edge(start, end)
+def test_get_nodes():
+
+    graph = Graph()
+
+    banana = graph.add_node('banana')
+
+    apple = graph.add_node('apple')
+
+    loner = Vertex('loner')
+
+    expected = 2
+
+    actual = len(graph.get_nodes())
+
+    assert actual == expected
+
+
 def test_get_neighbors():
-    collection = []
-    holder = {}
-    actual = collection.append(holder)
-    excepted = collection
-    assert actual == excepted
 
-#@pytest
-def test_size(self):
-    actual = len(self.graph) if len(self.graph) > 0 else None
-    excepted = actual
-    assert actual == excepted
+    graph = Graph()
 
-#@pytest
-def test_breadth_first(self, vertex):
-    nodes = []
-    holder = set()
-    breadth = Queue()
-    actual = holder.add(vertex.value), breadth.enqueue(vertex)
-    excepted = nodes
-    assert actual == excepted
+    banana = graph.add_node('banana')
 
+    apple = graph.add_node('apple')
+
+    graph.add_edge(apple, banana, 44)
+
+    neighbors = graph.get_neighbors(apple)
+
+    assert len(neighbors) == 1
+
+    neighbor_edge = neighbors[0]
+
+    assert neighbor_edge.vertex.value == 'banana'
+
+    assert neighbor_edge.weight == 44
+
+def test_breadth_first():
+    graph = Graph()
+
+    apple = graph.add_node('apple')
+    cherry = graph.add_node('cherry')
+    orange = graph.add_node('orange')
+    banana = graph.add_node('banana')
+
+    graph.add_edge(apple,banana)
+    graph.add_edge(orange,banana)
+    graph.add_edge(cherry,orange)
+    graph.add_edge(banana,cherry)
+
+    expected = 'apple ,banana ,cherry ,orange ,'
+    actual = graph.breadth_first(apple)
+    assert actual == expected
+    
