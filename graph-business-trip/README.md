@@ -6,7 +6,7 @@
 
 ## Whiteboard Process
 
-![Whiteboard Process]()
+![Whiteboard Process](graph_trip.png)
 
 ## Approach & Efficiency
 
