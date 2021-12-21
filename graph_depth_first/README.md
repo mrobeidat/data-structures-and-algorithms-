@@ -8,7 +8,7 @@
 
 ## Whiteboard Process
 
-![Whiteboard Process]()
+![Whiteboard Process](gdf.jpg)
 
 ## Approach & Efficiency
 
